@@ -1,5 +1,8 @@
 package se.lexicon;
 
+import java.util.Arrays;
+
+
 /**
  * Hello world!
  *
@@ -9,10 +12,72 @@ public class App
 {
     public static void main( String[] args ) {
 
-        boolean b =  isPalindrome("ni talar bra latin");
-        System.out.println(b);
+
+
+
+
+
+
+        }
+
+         //   ****  Exercises **** \\\
+    public static void stringExercise1() {
+        String java = "JAVA";
+        System.out.println(getLength(java));
     }
 
+    public static void stringExercise2() {
+    String example = "Long example sentence";
+
+    System.out.println(example.charAt(6));
+}
+
+    public static void stringExercise3() {
+       String example2 = "Even longer example sentence";
+
+       System.out.print(example2.indexOf("o"));
+   }
+
+    public static void stringExercise4() {
+        String scream = "CAPS EQUALS SCREAMING";
+
+        System.out.println(scream.toLowerCase());
+        System.out.println(scream.toUpperCase());
+    }
+
+    public static void stringExercise5() {
+        String proLang = "Java is the worst programming language!";
+
+        System.out.println(proLang.replace("worst", "best"));
+    }
+
+    public static void stringExercise6() {
+        String random = "\tJ\ta\tv\ta\t";
+        System.out.println(random.trim());
+
+    }
+
+    public static void stringExercise7() {
+        int yr = 20;
+
+        String year = Integer.toString(yr);
+        year = year + "20";
+
+        System.out.println(year);
+
+    }
+
+    public static void stringExercise8() {
+        String[] split = new String[]{"Oil and Water"};
+
+
+
+
+
+    }
+
+
+                 // *** METHODS *** \\
     public static boolean isPalindrome(String string) {
         return string
                 .replaceAll(" ", "")
@@ -20,6 +85,16 @@ public class App
                         new StringBuilder(string.replaceAll(" ", "")).reverse().toString()
                 );
     }
+
+    public static int getLength(String string){
+        return string.length();
+    }
+
+    public static char getCharFromString(String string, int index){
+        return string.charAt(index);
+    }
+
+                // *** EXAMPLES *** \\
 
     public static void equalsAndEqualsIgnoreCase(){
         String name = "Federico Sanders";
@@ -36,11 +111,7 @@ public class App
         String endsWithString = "at";
 
         System.out.println(
-                string.toLowerCase()
-                        .startsWith(
-                                startsWithString.toLowerCase()
-                        )
-        );
+                string.toLowerCase().startsWith(startsWithString.toLowerCase()));
 
         System.out.println(string.endsWith(endsWithString));
     }
@@ -61,9 +132,7 @@ public class App
         System.out.println(anotherSubString);
     }
 
-    public static int getLength(String string){
-        return string.length();
-    }
+
 
     public static void indexOfExample(){
         String name = "Fabrice Badia";
@@ -74,9 +143,7 @@ public class App
         System.out.println(name.indexOf(" "));
     }
 
-    public static char getCharFromString(String string, int index){
-        return string.charAt(index);
-    }
+
 
 
 }
